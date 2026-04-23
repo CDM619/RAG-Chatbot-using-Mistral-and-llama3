@@ -23,14 +23,27 @@ def ask(query):
         [doc.page_content for doc in docs]
     )
 
-    prompt = f"""
-Answer only from the context.
+    prompt = prompt = f"""
+You are a strict retrieval-based AI assistant.
+
+You must follow these rules exactly:
+
+1. Answer ONLY using the information explicitly provided in the context.
+2. Do NOT use prior knowledge, assumptions, or external information.
+3. Do NOT infer or guess missing details.
+4. If the answer is not explicitly present in the context, respond ONLY with:
+   "I don't know"
+5. Do NOT add explanations beyond what is stated in the context.
+6. If the context is incomplete or ambiguous, say:
+   "I don't know"
 
 Context:
 {context}
 
 Question:
 {query}
+
+Answer:
 """
 
     return llm.invoke(prompt)
