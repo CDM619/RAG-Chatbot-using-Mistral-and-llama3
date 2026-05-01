@@ -6,9 +6,9 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 
-st.set_page_config(page_title="RAG Chatbot", layout="wide")
+st.set_page_config(page_title="Document Intelligence RAG System", layout="wide")
 
-st.title(" RAG Chatbot ")
+st.title(" Document Intelligence RAG System ")
 
 # -------- Sidebar Upload --------
 uploaded_file = st.sidebar.file_uploader("Upload a PDF", type="pdf")
