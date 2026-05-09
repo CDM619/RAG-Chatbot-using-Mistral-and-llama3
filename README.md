@@ -1,4 +1,4 @@
-# RAG Chatbot using Mistral (Ollama)
+# Document Intelligence RAG System
 
 ## Overview
 
